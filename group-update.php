@@ -69,10 +69,6 @@ foreach ($debtList as $debtCustomer) {
         // שליחה לשרת
         $response = postJson($updateUrl, $customer, $authUser, $authPass);
 
-        echo $customer['CardNumber'] . "<br />";
-        var_dump($response);
-        echo "<br />";
-
         // בדיקה אם הצליח (אפשר להוסיף תנאי לפי תגובה)
         $updatedCount++;
     }
