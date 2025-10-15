@@ -1,6 +1,7 @@
 <?php
 
 $env = parse_ini_file(__DIR__ . '/.env', false, INI_SCANNER_RAW);
+if (!$env) die("Cannot read .env\n");
 
 $authUser = $env['AUTH_USER'] ?? '';
 $authPass = $env['AUTH_PASS'] ?? '';
